@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo fixo de tela</title>
     <style>
         body {
             height: 97vh;
@@ -16,16 +16,32 @@
             background-position: center top;
             background-repeat: no-repeat;
             background-size: contain; /* Vai colocar a imagem 100%, o tamanho dela total. caso a tela do usuário seja maior que a imagem, ela criará bordas pretas */
-            background-size: cover; /* Ele vai exibir 100% da tela do usuário com a imagem, porém, não irá mostar 100% da imagem ao usuário, apenas uma parte dela para se adaptar ao formato do dispositivo */
+            background-size: cover; /* Ele vai exibir 100% da tela do usuário com a imagem, porém, não irá mostar 100% da imagem ao usuário, apenas uma parte dela para se adaptar ao formato do dispositivo.
+            
+            OBSERVAÇÃO PARA AMBOS: Se o conteúdo for maior que a imagem e for preciso fazer um scroll na tela, a imagem será cortada e criará bordas pretas. Para resolver isso é usado o código de baixo ( vincúlo ) */
 
-
+            /* Vinculo é usado para travar a imagem da rolagem.
+            
+            vinculo > attachment
+            */
+            background-attachment: scroll; /* Rolou o conteúdo, irá rolar o background */
+            background-attachment: fixed; /* Rolou o conteúdo, porém, a imagem ficará fixa ao tamanho dela! */
 
             /* Nunca distorça sua imagem! */
+
+            /* Shorthand - background 
+                color > image > position > / > size > repeat > attachment
+            */
+
+            background: black url("imagens/wallpaper002.jpg") center center / cover no-repeat fixed;
+
+            /* Seguinte a barra "/" é utilizada aqui para separar "center" que é a posição da imagem de fundo e "cover" que é a dimensão da imagem. Se não colocar a barra, o interpretador de css pode interpretar como uma propriedade incorreta e sua imagem pode não ser exibida corretamente.
+            */
         }
 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
@@ -36,6 +52,10 @@
 <body>
     <main>
         <h1>Teste de Imagem de Fundo</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis dolores cumque a, esse sint vero magnam nesciunt amet, quam recusandae quos voluptatibus dolore maxime! Ipsam nostrum voluptatum asperiores. Tempore, voluptates! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates recusandae, ad sint voluptate ut sunt enim rerum delectus eveniet sequi voluptatibus deleniti obcaecati optio porro tempora eos facilis, fugiat reprehenderit.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis dolores cumque a, esse sint vero magnam nesciunt amet, quam recusandae quos voluptatibus dolore maxime! Ipsam nostrum voluptatum asperiores. Tempore, voluptates! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates recusandae, ad sint voluptate ut sunt enim rerum delectus eveniet sequi voluptatibus deleniti obcaecati optio porro tempora eos facilis, fugiat reprehenderit.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis dolores cumque a, esse sint vero magnam nesciunt amet, quam recusandae quos voluptatibus dolore maxime! Ipsam nostrum voluptatum asperiores. Tempore, voluptates! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates recusandae, ad sint voluptate ut sunt enim rerum delectus eveniet sequi voluptatibus deleniti obcaecati optio porro tempora eos facilis, fugiat reprehenderit.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis dolores cumque a, esse sint vero magnam nesciunt amet, quam recusandae quos voluptatibus dolore maxime! Ipsam nostrum voluptatum asperiores. Tempore, voluptates! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates recusandae, ad sint voluptate ut sunt enim rerum delectus eveniet sequi voluptatibus deleniti obcaecati optio porro tempora eos facilis, fugiat reprehenderit.</p>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis dolores cumque a, esse sint vero magnam nesciunt amet, quam recusandae quos voluptatibus dolore maxime! Ipsam nostrum voluptatum asperiores. Tempore, voluptates! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates recusandae, ad sint voluptate ut sunt enim rerum delectus eveniet sequi voluptatibus deleniti obcaecati optio porro tempora eos facilis, fugiat reprehenderit.</p>
     </main>
     
