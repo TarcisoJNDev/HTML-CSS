@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradiente em CSS</title>
+  <style>
+    * { /* Configurações globais das CSS */
+      height: 100%;
+    }
+    
+    /*Essa é a forma de cria um Gradiente no CSS, por mais que o nome seja com ideia "diferente", para criar um gradiente no Css é sempre exigido o "background-image".
+
+    Onde a sua forma será assim -> background-image: linear-gradiente("to" direção do gradiente, cor01, cor02); 
+    
+    Tipos de Direções: bottom(baixo), top(cima), left(esquerdo), right(direito)
+    
+    "deg -> Graus/Ângulo do seu Gradiente "
+    
+    no linear-gradient, podemos trocar por "radial-gradient(O formato do radial[circle])"
+    
+    */
+    body{ 
+      background-image: linear-gradient(to right, #3198E2 9%, #6d59C0, #B93590, #E33F5F, #FDD579);
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body>
+  <!---->
+  <h1>Testando Gradiente</h1>
+</body>
+</html>

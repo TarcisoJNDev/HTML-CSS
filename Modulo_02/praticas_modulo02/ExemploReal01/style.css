@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/*@charset é uma regra junto com o UTF-8 para o CSS não ter problema com palavras "especiais" da lingua portuguesa. Exemplo: é, Õ,*/
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  /*height: 100%; /*Altura 100%*/
+}
+
+body {
+  background-image: linear-gradient(to right, #F1D8C9, #F2C3A7);
+}
+
+main {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(135, 93, 93, 0.644);
+  width: 600px;
+  padding: 10px;
+  margin: auto;
+}
+
+h1 {
+  color: #f39209;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(129, 77, 5, 0.872);
+}
+
+h2 {
+  color: #02064b
+}
+
+p {
+  text-align: justify;
+}

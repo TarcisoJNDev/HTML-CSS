@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos com HTML5</title>
+</head>
+<body>
+  <!-- Formato de videos: -->
+  <!-- MP4, M4V WEBM OGV-->
+  <h1>Inserindo videos hospedados localmente</h1>
+  <p>Este video está hospedado no meu próprio servidor.</p>
+  <!-- Forma Simples-->
+  <video src="midia/13028933_1920_1080_60fps.mp4" width="500" controls></video>
+  <video src="midia/13028933_1920_1080_60fps.m4v" width="500" controls></video>
+  <video src="midia/13028933_1920_1080_60fps.webm" width="500" controls></video>
+  <video src="midia/13028933_1920_1080_60fps.ogv" width="500" controls></video>
+
+  <h2>Forma certa!</h2>
+  <!-- forma correta--> 
+  <!-- mesma coisa com imagem, sempre do menor arquivo até o maior... isso tbm equivale aos videos. (veja o tamanho de cada arquivo no gerenciador de arquivos)-->
+  <video width="500" poster="midia/foto de thumb para o video" controls>
+    <source src="midia/13028933_1920_1080_60fps.mp4" type="video/mp4">
+    <source src="midia/13028933_1920_1080_60fps.m4v" type="video/mp4">
+    <source src="midia/13028933_1920_1080_60fps.webm" type="video/webm">
+    <source src="midia/13028933_1920_1080_60fps.ogv" type="video/ogg">
+    <p>Seu naveador não tem compatibilidade com reprodução de vídeos.</p>
+  </video> 
+  <h1>Inserindo vídeos do Youtbe</h1>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y?si=oLmqfy1reX75gdk9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  <h1>Inserindo vídeo no Vimeo</h1>
+  <iframe src="https://player.vimeo.com/video/120182822?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Animation"></iframe>
+
+  <!-- M4V -> RECOMENDAVEL -->
+</body>
+</html>

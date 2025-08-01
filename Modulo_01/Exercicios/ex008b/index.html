@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outras formatações</title>
+</head>
+<body>
+  <h1>Outras formatações</h1>
+  <h2>Código-fonte</h2> 
+  <p>O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript. <br>É utilizado a tag &lt;code&gt; para ajudar a ler com uma fonte monoespaçada.</p> <!-- Esse comando faz com que a linha que tenha o "code" seja monoespaçada, ou seja, que dê para ler e cada letra tem seu tamanho igual.-->
+  <h2>Pré-formtacação</h2>
+  <p>Utilizamos a tag &lt;pre&gt; para formatação de texto para se guiar com as quebras de linhas e tudo mais. <br>(Utilizado para descrever estrututra de códigos) </p>
+  <pre>
+    <code>
+num = int(input('Digite um número'))
+if num % 2 == 0;
+    print(f'O número {num} é PAR')
+else:
+    print(f'O número {num} é IMPAR')
+print(f'Fim do programa')
+    </code>
+  </pre>
+  <h2>Citações</h2> <!-- Citaçâo simples, aquela que fica na mesma linha, exemplo: frases, deboche ou algo do tipo.-->
+  <p>É utilizado a tag &lt;q&gt; para citações Simples. Adicionando ("") no texto. <br>Como diria o pai de um amigo: <q>o computador é um burro muito rápido</q></p>
+  <h2>Citações Completas</h2>
+  <p>É utilizado a tag &lt;blockquote&gt; para citações Completas/Grandes. <br>Onde utilza &lt;cite&gt; logo após o blockquote, para citar o link do quê você está citando no blockquote. <br>Segundo Jeff Noble, no seu livro HTML para Leigos:</p>
+  <!-- É utilizado o blockquote para citações grandes onde possui quebra de linha e é deslocado um pocuo para direita. exemplos: livros ou descrição de opinião...  -->
+  <!-- Já o "cite" é utilizado para citar oq você está citando na citação(no blockquote), onde você ajuda o mecanismo do google saber que você está citando esse livro no seu site (obs: não vai mudar nada esteticamente a frase dentro do blockquote quando você adicionar o "cite"") -->
+  <blockquote cite="https://books.google.com.br/books/about/HTML_XHTML_e_CSS_Para_Leigos.html?id=E8ZtDwAAQBAJ&redir_esc=y">
+    A diferença entre elementos inline e um bloco de texto é importante. Os elementos HTML neste capítulo descrevem os blocos de texto.
+  </blockquote>
+  <h2>Abreviações</h2>
+  <p>Utilizamos a tag &lt;abbr&gt; para "explicarmos" uma abreviação importante no texto. <br> Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. Estou adorando! (passe o mouse em cima do html e css.)</p>
+  <h2>Texto Invertido</h2>
+  <p>É utilizado a tag &lt;bdo&gt; para inverter as palavras. <br><bdo dir="rtl"> Estou aprendendo a criar coisas em HTML.</bdo></p>
+  <!-- bdo dir="rtl" = right to left -->
+  <!-- bdo dir="ltr" = left to right -->
+</body>
+</html>

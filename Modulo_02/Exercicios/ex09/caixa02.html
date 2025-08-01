@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grouping Tags</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: dimgray;
+    }
+
+    header {
+      background-color: white;
+      padding: 10px;
+      margin: 0px;
+    }
+
+    main {
+      background-color: white;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px 20px 10px 20px; 
+      /* ARREDONDAMENTO DAS BORDAS 
+      
+      border-radius: 10px (vai para todos os lados a mesma configuração)
+
+      border-radius: 10px 20px;
+
+      os nomes dos lados do radius:
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-right-raidus: 10px;
+      border-bottom-left-radius: 10px;
+
+      */
+    }
+
+    article {
+      background-color: lightgray;
+      padding: 5px;
+    }
+
+    nav {
+      background-color: rgb(87, 87, 87);
+      padding: 3px;
+      box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315);
+      /* box-shadow: horizontal vertical espalhamento sombra.         */
+    }
+
+    nav > a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      margin-right: 30px;
+    }
+
+    nav > a:hover {
+      text-decoration: underline;
+    }
+
+    article > aside {
+      background-color: rgb(146, 146, 146);
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 4px;
+      margin: 0px;
+    }
+
+    footer > p {
+      margin: 0px;
+    }
+
+    div#bola {
+      height: 100px;
+      width: 100px;
+      background-color: white;
+      margin: 10px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Utilize essas Tags SEMÂNTICAS para o buscar do google performar melhor na busca para seu site 
+
+  As tags semânticas são "div" mas de forma especiais/semânticas para algo especifico.
+  
+  Lembrando: nem tudo deve ser "DIV"! -->
+
+  <!-- <div></div>  Box Level -->
+  <!-- <span></span> inline Level -->
+  <header> <!-- Cabeçalho -->
+    <h1>Meu Site</h1>
+    <nav>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+    </nav>
+   </header>
+   <main> <!-- Conteúdo Principal -->
+    <section id="assuntos">
+      <p>Esportes Políticas Tecnologia</p>
+    </section>
+    <section id="noticias">
+      <article>
+        <h2>Notícias sobre o Brasil</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptate ut voluptates consequuntur unde. Amet similique iusto nostrum pariatur laboriosam dignissimos aliquam architecto, quo, voluptates iure quibusdam a rem totam.</p>
+        <aside>
+          <p>Artigo escrito por José da Silva</p>
+        </aside>
+      </article>
+      <article>
+
+      </article>
+    </section>
+    <section id="assuntos"></section>
+   </main>
+   <footer> <!-- Rodapé -->
+    <p>Desenvolvido pelo CursoemVideo</p>
+   </footer>
+   <div id="bola"></div>
+</body>
+</html>

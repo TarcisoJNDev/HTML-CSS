@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fontes com CSS</title>
+  <style>
+    body {
+      font-family: Arial; /* Errado */
+      font-family: Arial, Helvetica, sans-serif;/* Certo */
+      /*Safe combinations -> são sempre usados 3 fontes para seu site web, pois, nem todos os navegadores/computadores podem ter suas fontes escolhidas. Então é sempre usadas três fontes ( a última é sempre usada como uma fonte geralizada. exemplo: fantasy, cursive, sans-serif, serif...) */
+      
+      /*-------------------------------------------------*/
+      /* 
+      Medidas Absolutas:
+      cm(centrimentos), mm(melimetro), in(Polegada), px(Pixels), pt(Ponto/para folha de oficio), pc(Paika)
+
+      
+      Medidas Relativas
+      em(Medida Relativa da fonte), ex(Medida Relativa X da fonte), rem(Medida Relativa do Route da Fonte), Vw(Largura da sua tela/ViewPort), vh(Altura da ViewPort)
+
+      Medidas Recomendadas do W3C -> px e em.
+
+      16px = 1em;
+      */
+      font-size: 16px;
+      /*Feito para definir o tamanho da fonte*/
+      /*-------------------------------------------------*/
+      font-weight: normal;
+      /* Feito para definir o PESO das palavras das fontes
+      Tamanhos de "pesos" para fontes: Lighter, normal, bold, bolder.
+
+      Peso Númerico: 100 á 900.
+
+      weight = peso
+      width = largura 
+      height = altura
+
+      Para saber todas as opções de peso, basta clicar no "Control + barra de espaço"
+      */
+
+      /*-------------------------------------------------*/
+      font-style: italic;
+      /* É usado apenas para colocar no ítalico
+      É usada para colocar um estilo(Italico) na sua fonte
+     
+      /*-------------------------------------------------*/
+      text-decoration: underline;
+      /* É usado apenas para colocar o sublinhado no texto, tanto no meio(line-through), em cima(overline) e em baixo(underline).
+      /*-------------------------------------------------*/
+      /* Shorthand font */
+      /*
+      É Basicamente feita para colocar todos os atributos da fonte em apenas uma linha!
+
+      Sua estrututra: font-style -> font-weight -> font-size -> font-family
+
+      Exemplo: 
+      font: italic normal 1em 'Work Sans', sans-serif;
+      */
+
+    }
+
+    h1, h2 {
+      font-family: 'Times New Roman', Times, serif
+    }
+  </style>
+</head>
+<body>
+  <h1>Trabalhando com fontes</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quibusdam culpa iste harum saepe ex incidunt, quaerat nobis similique soluta id iure sunt! Minus pariatur, fugiat quibusdam cupiditate vel nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit rerum deserunt dicta harum neque blanditiis laboriosam, aliquid recusandae possimus maxime distinctio sunt, eaque officia sequi repudiandae modi placeat temporibus itaque.</p>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed ipsam tempore non soluta, cupiditate temporibus at qui illum itaque rem totam repellat ad architecto ut dicta excepturi alias optio aliquid!</p>
+  <h2>Subtítulo do exercício</h2>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit a, illo dolorum itaque ea ad sint magni, neque magnam, inventore possimus odit fugit nam sunt praesentium beatae eligendi quisquam. Maiores?</p>
+</body>
+</html>
