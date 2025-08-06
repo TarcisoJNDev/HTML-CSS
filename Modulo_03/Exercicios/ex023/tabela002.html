@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de tabelas grandes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            position: relative;
+            width: 400px;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 15px;
+        }
+
+        /* Fazer com quê p cabeçalho fique de forma "Travada" e que continue no scroll para quê não seja necessario voltar tudo para entender qual coluna é responsável */
+        thead > tr > th {
+            position: sticky; /* posicionamento parado */
+            top: -1px; /* vai determindar onde ele irá começar para ficar fixo atraves da tela e scroll */
+            background-color: gray;
+        }
+
+        thead, tfoot {
+            background-color: gray;
+            color: white;
+        }
+
+        caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        .numero {
+            text-align: right;
+        }
+
+        /* :(PseudoClass)nth-child(2n) = Em duas Em duas, o efeito será aplicado.
+        
+        Caso queira usar de forma sintaxamente, pode usar odd (Impar) ou even (par)   
+        */
+        tbody > tr:nth-child(2n){
+            background-color: lightgray;
+        }
+
+        tbody > tr:nth-child(odd){
+            background-color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!-- 
+        HIERAQUIA PARA TABELAS GRANDES
+        TABLE
+            CAPTION -> Legenda da tabela
+            THEAD -> Cabeça da tabela
+                TR, TD, TH
+            TBODY -> Corpo da tabela
+                TR, TD, TH
+            TFOOT -> Pé da tabela
+                TR, TD, TH
+    -->
+    <table>
+        <caption>
+            População das Unidades Federativas
+        </caption>
+        <thead>
+            <tr>
+                <!-- 
+                Scope: Avisar ao Html os Títulos das colunas e linhas de forma MAIS CLARA POSSÍVEL!... 
+                
+                col = Coluna
+                row = linha
+
+                Google acha isso muito importante!
+                -->
+                <th scope="col">Estado</th> <!-- Tag para o cabeçalho da tabela, a informação para explicar ao usúario sobre oque se trata a coluna da tabela... th = Título da Tabela -->
+                <th scope="col" style="width: 150px;">Populaçao</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="numero">45 919 049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="numero">21 168 791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="numero">17 264 943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="numero">14 873 064</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="numero">11 423 957</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="numero">11 377 299</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="numero">9 537 071</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Espírito Santos</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Dostrotp Federal</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Rondõnia</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Tocatins</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Anapá</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="numero">9 132 078</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th> <!-- th = Titulo -->
+                <td class="numero"><strong>210.147.125</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur unde distinctio, modi quaerat explicabo sint error quasi ipsum dolores. Consequuntur doloremque vero numquam! Eveniet, libero suscipit magni ratione doloremque officiis.orem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis rerum itaque exercitationem maiores in quaerat modi, veritatis veniam quidem atque. Hic, laborum consectetur accusamus officiis fuga repellat alias? Autem, recusandae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum magni accusantium minus sed. Nisi, atque officiis. Laboriosam id, quo vel consequuntur quas vitae aliquam consequatur commodi, officiis necessitatibus asperiores voluptas.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur unde distinctio, modi quaerat explicabo sint error quasi ipsum dolores. Consequuntur doloremque vero numquam! Eveniet, libero suscipit magni ratione doloremque officiis.orem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis rerum itaque exercitationem maiores in quaerat modi, veritatis veniam quidem atque. Hic, laborum consectetur accusamus officiis fuga repellat alias? Autem, recusandae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum magni accusantium minus sed. Nisi, atque officiis. Laboriosam id, quo vel consequuntur quas vitae aliquam consequatur commodi, officiis necessitatibus asperiores voluptas.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur unde distinctio, modi quaerat explicabo sint error quasi ipsum dolores. Consequuntur doloremque vero numquam! Eveniet, libero suscipit magni ratione doloremque officiis.orem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis rerum itaque exercitationem maiores in quaerat modi, veritatis veniam quidem atque. Hic, laborum consectetur accusamus officiis fuga repellat alias? Autem, recusandae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum magni accusantium minus sed. Nisi, atque officiis. Laboriosam id, quo vel consequuntur quas vitae aliquam consequatur commodi, officiis necessitatibus asperiores voluptas.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur unde distinctio, modi quaerat explicabo sint error quasi ipsum dolores. Consequuntur doloremque vero numquam! Eveniet, libero suscipit magni ratione doloremque officiis.orem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis rerum itaque exercitationem maiores in quaerat modi, veritatis veniam quidem atque. Hic, laborum consectetur accusamus officiis fuga repellat alias? Autem, recusandae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum magni accusantium minus sed. Nisi, atque officiis. Laboriosam id, quo vel consequuntur quas vitae aliquam consequatur commodi, officiis necessitatibus asperiores voluptas.</p>
+</body>
+</html>

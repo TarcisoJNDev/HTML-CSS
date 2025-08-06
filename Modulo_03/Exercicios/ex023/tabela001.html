@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 400px; /* Largura */
+            height: 400px; /* Altura */
+            border-collapse: collapse;
+            /* border-collapse serve para juntar as bordas dos dados, naturalmente ele vem com "separate" */
+        }
+
+        tr.linha {
+            background-color: yellow;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left; /* Alinhamento horizontal */
+            vertical-align: middle; /* Alinhamento Vertical */
+        }
+
+        td.dado {
+            background-color: chartreuse;
+        }
+
+        .numero {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minha primeira tabela</h1>
+    <!-- table vai delimitar a tabela criada, ou seja, vai dizer ao browser que oq irei criar É UMA TABELA -->
+    <!--
+        HIERAQUIA DE TABELAS ( simples ):
+
+        TABLE = tabela
+        TABLE ROW = linha de tabela
+        TABLE HEADER = cabeçalho de tabela
+        TABLE DATA = dado de tabela ( conteúdo inserindo dentro dela )
+    -->
+    <!--
+        OBSERVAÇÃO: O W3C no html5 coloca como opcional o FECHAMENTO da tag "td", mas, para manutenção e diminuir erro na hora do código... É recomendável ainda utilizar o fechamento dessa tag.
+    -->    
+    <table>
+        <tr class="linha"> <!-- Primeira linha -->
+            <td class="">A1 <!-- Primeiro dado -->
+            <td>B1 <!-- Segundo dado -->
+            <td>C1 <!-- Terceiro dado-->
+        </tr>
+        <tr> <!-- Segunda linha -->
+            <td class="dado">A2</td> <!-- Primeiro dado -->
+            <td>B2</td> <!-- Segundo dado -->
+            <td>C2</td> <!-- Terceiro dado-->
+        </tr>
+        <tr class="linha"> <!-- Terceira linha -->
+            <td>A3</td> <!-- Primeiro dado -->
+            <td>B3</td> <!-- Segundo dado -->
+            <td>C3</td> <!-- Terceiro dado-->
+        </tr>
+        <tr> <!-- Quarta linha -->
+            <td>A4</td> <!-- Primeiro dado -->
+            <td class="dado">B4</td> <!-- Segundo dado -->
+            <td class="numero">C4</td> <!-- Terceiro dado-->
+        </tr>
+        <tr>
+            <td>A5</td>
+            <td>B5</td>
+        </tr>
+        <tr>
+            <td>A6</td>
+        </tr>
+    </table>
+</body>
+</html>
